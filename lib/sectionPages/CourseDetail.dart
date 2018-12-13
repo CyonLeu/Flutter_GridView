@@ -18,7 +18,7 @@ class _CourseDetailState extends State<CourseDetail> {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: new Text('课程页'),
+        title: new Text('课程详情页'),
         //在appbar上面添加一个列表图标，可点击跳转新节目
         actions: <Widget>[
           new IconButton(icon: new Icon(Icons.android), onPressed: _pushSaved)

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:firstapp/Model/HomeCourseModel.dart';
 import 'package:firstapp/Network/NetworkManager.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +12,9 @@ class _StudyTabState extends State<StudyTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-//      appBar: new AppBar(
-//        title: new Text('学习'),
-//      ),
+      appBar: new AppBar(
+        title: new Text('学习'),
+      ),
       body: new Center(
         child: new Text('学习页'),
       ),

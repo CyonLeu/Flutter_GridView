@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+
+import 'sectionPages/GroupTab.dart';
 import 'sectionPages/HomeTab.dart';
 import 'sectionPages/MineTab.dart';
 import 'sectionPages/StudyTab.dart';
-import 'sectionPages/GroupTab.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       theme: ThemeData(
         primaryColor: Color(0xFF2bc329),
-          textSelectionColor: Color(0xFFFFFFF),
+        textSelectionColor: Color(0xFFFFFFF),
       ),
-      home: MyHomePage(title: '英语趣配音'),
+      home: MyHomePage(title: '飞鱼'),
     );
   }
 }
@@ -40,7 +40,8 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin{
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   int _counter = 0;
   TabController tabController;
 
@@ -48,11 +49,10 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   void initState() {
     super.initState();
     tabController = new TabController(
-        length: 4,   //Tab页的个数
+        length: 4, //Tab页的个数
         vsync: this //动画效果的异步处理，默认格式
-    );
+        );
   }
-
 
   void _incrementCounter() {
     setState(() {
@@ -74,33 +74,31 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
+//      appBar: AppBar(
+//        // Here we take the value from the MyHomePage object that was created by
+//        // the App.build method, and use it to set our appbar title.
+//        title: Text(widget.title),
+//      ),
       body: new TabBarView(
         controller: tabController,
         children: <Widget>[
-            //创建之前写好的三个页面，万物皆是Widget
+          //创建之前写好的三个页面，万物皆是Widget
           new HomeTab(),
           new StudyTab(),
           new GroupTab(),
           new MineTab(),
         ],
-    ),
-
+      ),
       bottomNavigationBar: new Material(
         color: Colors.white12,
         child: new TabBar(
-            controller: tabController,
-            tabs: <Tab>[
-              new Tab(text: "首页", icon: new Icon(Icons.home)),
-              new Tab(text: "学习", icon: new Icon(Icons.android)),
-              new Tab(text: "小组", icon: new Icon(Icons.group)),
-              new Tab(text: "我", icon: new Icon(Icons.settings)),
-
-            ],
+          controller: tabController,
+          tabs: <Tab>[
+            new Tab(text: "首页", icon: new Icon(Icons.home)),
+            new Tab(text: "学习", icon: new Icon(Icons.android)),
+            new Tab(text: "小组", icon: new Icon(Icons.group)),
+            new Tab(text: "我", icon: new Icon(Icons.settings)),
+          ],
           labelColor: Color(0xFF2bc329),
           unselectedLabelColor: Colors.grey,
         ),

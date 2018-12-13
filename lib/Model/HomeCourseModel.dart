@@ -4,13 +4,12 @@
 
 //@JsonSerializable()
 class HomeCourseModel extends Object {
-  int id;
-  int views;
+  String id;
+  String views;
   String title;
 //  @JsonKey(name:'sub_title')
   String subtitle;
 //  @JsonKey(name:'course_id')
-  String courseID;
   String pic;
 
   HomeCourseModel(
@@ -18,7 +17,6 @@ class HomeCourseModel extends Object {
     this.views,
     this.title,
     this.subtitle,
-    this.courseID,
     this.pic,
   );
 //  factory HomeCourseModel.fromJson(Map<String, dynamic> json) => _$HomeCourseModelFromJson(json);
@@ -26,11 +24,10 @@ class HomeCourseModel extends Object {
 //  Map<String, dynamic> toJson() => _$HomeCourseModelToJson(this);
 
   HomeCourseModel.fromJson(Map<String, dynamic> json)
-      : id = json['id'],
-        views = json['views'],
+      : id = json['id'].toString(),
+        views = json['views'].toString(),
         title = json['title'],
         subtitle = json['sub_title'],
-        courseID = json['course_id'],
         pic = json['pic'];
 
   Map<String, dynamic> toJson() => {
@@ -38,7 +35,6 @@ class HomeCourseModel extends Object {
         'views': views,
         'title': title,
         'sub_title': subtitle,
-        'course_id': courseID,
         'pic': pic
       };
 }

@@ -9,26 +9,26 @@ class _GroupTabState extends State<GroupTab> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-//      appBar: new AppBar(
-//        title: new Text('我'),
-//      ),
+        appBar: new AppBar(
+          title: new Text('小组'),
+        ),
         body: new Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        new Container(
-          color: Colors.pinkAccent,
-          child: buildRows(),
-          width: 375,
-          height: 300,
-        ),
-        new Container(
-          color: Colors.blueAccent,
-          child: buildColumns(),
-          width: 375,
-          height: 300,
-        ),
-      ],
-    ));
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            new Container(
+              color: Colors.pinkAccent,
+              child: buildRows(),
+              width: 375,
+              height: 300,
+            ),
+            new Container(
+              color: Colors.blueAccent,
+              child: buildColumns(),
+              width: 375,
+              height: 300,
+            ),
+          ],
+        ));
   }
 
   Widget buildRows() {
