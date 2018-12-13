@@ -47,11 +47,11 @@ class _HomeTabState extends State<HomeTab> {
   Widget _buildSuggestions() {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, //每行2个
-          mainAxisSpacing: 2.0, //主轴(竖直)方向间距
-          crossAxisSpacing: 3.0, //纵轴(水平)方向间距
-          childAspectRatio: 1.0 //纵轴缩放比例
-          ),
+        crossAxisCount: 2, //每行2个
+        mainAxisSpacing: 2.0, //主轴(竖直)方向间距
+        crossAxisSpacing: 3.0, //纵轴(水平)方向间距
+        childAspectRatio: 64.0 / 45.0, //纵轴缩放比例
+      ),
       itemCount: listData.length,
       itemBuilder: (BuildContext context, int index) {
         return HomeCourseItemWidget(listData[index]);
@@ -60,8 +60,6 @@ class _HomeTabState extends State<HomeTab> {
   }
 
   _queryData() async {
-//    var httpClient = new HttpClient();
-
     var params = Map();
     params['start'] = '0';
     params['rows'] = '40';

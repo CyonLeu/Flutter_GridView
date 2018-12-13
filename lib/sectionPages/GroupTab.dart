@@ -18,7 +18,7 @@ class _GroupTabState extends State<GroupTab> {
             new Container(
               color: Colors.pinkAccent,
               child: buildRows(),
-              width: 375,
+//              width: 375,
               height: 300,
             ),
             new Container(
