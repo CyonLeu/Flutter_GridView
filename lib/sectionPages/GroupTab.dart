@@ -13,7 +13,7 @@ class _GroupTabState extends State<GroupTab> {
           title: new Text('小组'),
         ),
         body: new Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             new Container(
               color: Colors.pinkAccent,
@@ -34,9 +34,9 @@ class _GroupTabState extends State<GroupTab> {
   Widget buildRows() {
     return new Row(
       mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.start,
+//      mainAxisAlignment: MainAxisAlignment.center,
 //      crossAxisAlignment: CrossAxisAlignment.center,
-//      textDirection: TextDirection.rtl,
+      textDirection: TextDirection.rtl,
       children: <Widget>[
         new Icon(
           Icons.info,

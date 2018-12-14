@@ -41,7 +41,7 @@ class _VideoPlayPageState extends State<VideoPlayPage> {
           centerTitle: true,
           title: new Text('视频播放页'),
         ),
-        body: Center(
+        body: Align(
           child: _controller.value.initialized
               ? AspectRatio(
                   aspectRatio: _controller.value.aspectRatio,

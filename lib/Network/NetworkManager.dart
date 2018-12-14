@@ -43,7 +43,7 @@ class NetworkManager {
 
     ///超时
     option.connectTimeout = 30000;
-    option.baseUrl = 'http://apis.qupeiyin.com/';
+    option.baseUrl = 'http://demo.com/'; //基本域名地址
 
     Dio dio = new Dio();
 
